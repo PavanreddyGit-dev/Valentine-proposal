@@ -6,8 +6,9 @@
 
 body {
   height: 100vh;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   overflow: hidden;
+
   background: linear-gradient(
     -45deg,
     #ff5f9e,
@@ -19,14 +20,13 @@ body {
   animation: gradientBG 12s ease infinite;
 }
 
-/* Gradient animation */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* CONTENT */
+/* CENTER CONTENT */
 .content {
   height: 100vh;
   display: flex;
@@ -35,13 +35,11 @@ body {
   align-items: center;
   text-align: center;
   color: white;
-  z-index: 2;
 }
 
 h1 {
   font-size: 36px;
   margin-bottom: 40px;
-  text-shadow: 0 4px 15px rgba(0,0,0,0.25);
 }
 
 /* BUTTONS */
@@ -56,12 +54,6 @@ button {
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transition: transform 0.2s;
-}
-
-button:hover {
-  transform: scale(1.1);
 }
 
 #yes {
