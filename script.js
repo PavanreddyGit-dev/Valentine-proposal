@@ -12,15 +12,15 @@ function typeEffect() {
 }
 typeEffect();
 
-// NO button escape 😈
+// NO button escape
 const noBtn = document.getElementById("no");
 noBtn.addEventListener("mouseover", () => {
   noBtn.style.position = "absolute";
-  noBtn.style.left = Math.random() * 80 + "%";
-  noBtn.style.top = Math.random() * 80 + "%";
+  noBtn.style.left = Math.random() * 70 + "%";
+  noBtn.style.top = Math.random() * 70 + "%";
 });
 
-// YES click 💍
+// YES click
 document.getElementById("yes").addEventListener("click", () => {
   document.body.innerHTML = "<h1 style='color:white'>She said YES 😍💍</h1>";
 });
@@ -34,5 +34,5 @@ setInterval(() => {
   heart.style.left = Math.random() * 100 + "vw";
   hearts.appendChild(heart);
 
-  setTimeout(() => heart.remove(), 6000);
+  setTimeout(() => heart.remove(), 5000);
 }, 400);
