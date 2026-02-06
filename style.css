@@ -20,6 +20,7 @@ body {
   animation: gradientBG 12s ease infinite;
 }
 
+/* Gradient animation */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -39,13 +40,13 @@ body {
 
 h1 {
   font-size: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 /* BUTTONS */
 .buttons {
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 button {
@@ -69,7 +70,7 @@ button {
   position: absolute;
   bottom: -20px;
   font-size: 20px;
-  animation: floatUp 6s linear infinite;
+  animation: floatUp 5s linear infinite;
 }
 
 @keyframes floatUp {
