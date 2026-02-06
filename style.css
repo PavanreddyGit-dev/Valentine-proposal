@@ -6,33 +6,27 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
   font-family: 'Poppins', Arial, sans-serif;
+  overflow: hidden;
+  background: linear-gradient(
+    -45deg,
+    #ff5f9e,
+    #ff7eb3,
+    #ff9a9e,
+    #fad0c4
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
 }
 
-/* VIDEO BACKGROUND */
-#bgVideo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -2;
+/* Gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* OVERLAY FOR READABILITY */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: -1;
-}
-
-/* MAIN CONTENT */
+/* CONTENT */
 .content {
   height: 100vh;
   display: flex;
@@ -41,11 +35,13 @@ body {
   align-items: center;
   text-align: center;
   color: white;
+  z-index: 2;
 }
 
 h1 {
   font-size: 36px;
   margin-bottom: 40px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.25);
 }
 
 /* BUTTONS */
@@ -60,6 +56,12 @@ button {
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 #yes {
@@ -68,4 +70,17 @@ button {
 
 #no {
   background: #ff5252;
+}
+
+/* FLOATING HEARTS */
+.hearts span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
 }
