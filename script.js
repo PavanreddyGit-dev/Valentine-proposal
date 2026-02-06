@@ -1,5 +1,5 @@
 // Typing animation
-const text = "lover name 💖 Will you be my Valentine?";
+const text = "LOVER NAME 💖 Will you be my Valentine?";
 let i = 0;
 const title = document.getElementById("title");
 
@@ -12,7 +12,7 @@ function typeEffect() {
 }
 typeEffect();
 
-// NO button逃跑 😈
+// NO button escape 😈
 const noBtn = document.getElementById("no");
 noBtn.addEventListener("mouseover", () => {
   noBtn.style.position = "absolute";
@@ -20,20 +20,7 @@ noBtn.addEventListener("mouseover", () => {
   noBtn.style.top = Math.random() * 80 + "%";
 });
 
-// YES celebration 😍
+// YES click 💍
 document.getElementById("yes").addEventListener("click", () => {
-  document.body.innerHTML = "<h1>YAY!! 💖💍 I knew it 😘</h1>";
+  document.body.innerHTML = "<h1>She said YES 😍💍</h1>";
 });
-
-// Floating hearts generator
-const hearts = document.querySelector(".hearts");
-
-setInterval(() => {
-  const heart = document.createElement("span");
-  heart.innerHTML = "💖";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
-  hearts.appendChild(heart);
-
-  setTimeout(() => heart.remove(), 6000);
-}, 400);
