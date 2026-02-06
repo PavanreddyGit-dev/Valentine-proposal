@@ -1,29 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  text-align: center;
-  font-family: 'Poppins', Arial, sans-serif;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
-  padding-top: 120px;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* VIDEO BACKGROUND */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* OVERLAY FOR READABILITY */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+/* MAIN CONTENT */
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
 h1 {
-  color: white;
   font-size: 36px;
-  margin: 20px;
+  margin-bottom: 40px;
 }
 
+/* BUTTONS */
 .buttons {
-  margin-top: 40px;
+  display: flex;
+  gap: 25px;
 }
 
 button {
-  font-size: 22px;
+  font-size: 20px;
   padding: 15px 40px;
   border: none;
   border-radius: 30px;
-  margin: 15px;
   cursor: pointer;
 }
 
@@ -33,17 +68,4 @@ button {
 
 #no {
   background: #ff5252;
-}
-
-/* Floating hearts */
-.hearts span {
-  position: absolute;
-  bottom: -20px;
-  font-size: 24px;
-  animation: floatUp 6s linear infinite;
-}
-
-@keyframes floatUp {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-110vh); opacity: 0; }
 }
