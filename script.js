@@ -24,3 +24,15 @@ noBtn.addEventListener("mouseover", () => {
 document.getElementById("yes").addEventListener("click", () => {
   document.body.innerHTML = "<h1>She said YES 😍💍</h1>";
 });
+// Floating hearts
+const hearts = document.querySelector(".hearts");
+
+setInterval(() => {
+  const heart = document.createElement("span");
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+  hearts.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 6000);
+}, 400);
