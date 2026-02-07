@@ -12,10 +12,10 @@ body {
   overflow: hidden;
 
   background: linear-gradient(
-    135deg,
-    #ff6aa2,
-    #ff9a9e,
-    #fecfef
+  135deg,
+  #c77dff,
+  #ffafcc
+);
   ) !important;
 
   background-size: 400% 400%;
