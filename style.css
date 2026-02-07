@@ -88,10 +88,42 @@ button {
 }
 
 .yes-image-container img {
-  max-width: 90%;
-  max-height: 90%;
+  /* YES IMAGE SCREEN */
+.yes-image-container {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ff5f9e, #ff7eb3);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 20px;
+}
+
+/* TEXT ABOVE IMAGE */
+.yes-text {
+  color: white;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+/* IMAGE – FORCE CENTER & SCALE */
+.yes-image-container img {
+  display: block;
+  max-width: 90vw;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+
+  margin: 0 auto;
+
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
 }
 /* YES IMAGE SCREEN */
 .yes-image-container {
