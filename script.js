@@ -1,43 +1,32 @@
-// Typing effect
-const text = "LOVER NAME 💖 Will you be my Valentine?";
-let i = 0;
-const title = document.getElementById("title");
-
-function typeEffect() {
-  if (i < text.length) {
-    title.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 80);
-  }
-}
-typeEffect();
-
-// NO button escape
+const yesBtn = document.getElementById("yes");
 const noBtn = document.getElementById("no");
-noBtn.addEventListener("mouseover", () => {
-  noBtn.style.position = "absolute";
-  noBtn.style.left = Math.random() * 70 + "%";
-  noBtn.style.top = Math.random() * 70 + "%";
-});
+const heartsContainer = document.querySelector(".hearts");
 
-// YES click
-document.getElementById("yes").addEventListener("click", () => {
-  document.body.innerHTML = `
-    <div class="yes-image-container">
-      <h1 class="yes-text">Porra gottam*** 💖</h1>
-      <img src="yes.jpg" alt="Love Image">
-    </div>
-  `;
-});
-
-// Floating hearts
-const hearts = document.querySelector(".hearts");
-
+/* Floating hearts generator */
 setInterval(() => {
   const heart = document.createElement("span");
   heart.innerHTML = "💖";
   heart.style.left = Math.random() * 100 + "vw";
-  hearts.appendChild(heart);
+  heart.style.animationDuration = (6 + Math.random() * 4) + "s";
 
-  setTimeout(() => heart.remove(), 5000);
-}, 400);
+  heartsContainer.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 10000);
+}, 500);
+
+/* NO button moves away */
+noBtn.addEventListener("mouseover", () => {
+  noBtn.style.position = "absolute";
+  noBtn.style.left = Math.random() * 80 + "vw";
+  noBtn.style.top = Math.random() * 80 + "vh";
+});
+
+/* YES click – show image */
+yesBtn.addEventListener("click", () => {
+  document.body.innerHTML += `
+    <div class="yes-image-container">
+      <div class="yes-text">Yaaay 💖 I knew it!</div>
+      <img src="jpg.jpeg" alt="Love Image">
+    </div>
+  `;
+});
