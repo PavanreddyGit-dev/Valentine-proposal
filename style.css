@@ -13,9 +13,8 @@ body {
 
   background: linear-gradient(
     120deg,
-    #ffdde1,
-    #ee9ca7,
-    #ffdde1
+    #ffffff 0%,
+    #f2f3f2 100%,
   );
   background-size: 300% 300%;
   animation: cinematicBG 18s ease-in-out infinite;
