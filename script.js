@@ -25,7 +25,7 @@ document.getElementById("yes").addEventListener("click", () => {
   document.body.innerHTML = `
     <div class="yes-image-container">
       <h1 class="yes-text">Porra gottam*** 💖</h1>
-      <img src="jpg.jpeg" alt="Love Image">
+      <img src="yes.jpg" alt="Love Image">
     </div>
   `;
 });
