@@ -23,9 +23,9 @@ noBtn.addEventListener("mouseover", () => {
 
 /* YES click – show image */
 yesBtn.addEventListener("click", () => {
-  document.body.innerHTML += `
+  document.body.innerHTML = `
     <div class="yes-image-container">
-      <div class="yes-text"> Porra gottam****</div>
+      <div class="yes-text">Porra gottam 💖</div>
       <img src="yes.jpg" alt="Love Image">
     </div>
   `;
