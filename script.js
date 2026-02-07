@@ -22,7 +22,11 @@ noBtn.addEventListener("mouseover", () => {
 
 // YES click
 document.getElementById("yes").addEventListener("click", () => {
-  document.body.innerHTML = "<h1 style='color:white'>She said YES 😍💍</h1>";
+  document.body.innerHTML = `
+    <div class="yes-image-container">
+      <img src="yes.jpg" alt="Love Image">
+    </div>
+  `;
 });
 
 // Floating hearts
