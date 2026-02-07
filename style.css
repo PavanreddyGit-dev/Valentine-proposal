@@ -7,23 +7,22 @@
 
 /* PAGE BACKGROUND */
 body {
+  body {
   height: 100vh;
-  font-family: Arial, sans-serif;
   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 
   background: linear-gradient(
-  135deg,
-  #c77dff,
-  #ffafcc
-);
-  ) !important;
-
-  background-size: 400% 400%;
-  animation: gradientBG 12s ease infinite;
+    120deg,
+    #ffdde1,
+    #ee9ca7,
+    #ffdde1
+  );
+  background-size: 300% 300%;
+  animation: cinematicBG 18s ease-in-out infinite;
 }
 
-/* GRADIENT ANIMATION */
-@keyframes gradientBG {
+@keyframes cinematicBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
