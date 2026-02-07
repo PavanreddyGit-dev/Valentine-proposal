@@ -5,9 +5,8 @@
   box-sizing: border-box;
 }
 
-/* PAGE BACKGROUND */
+/* PAGE BACKGROUND – LIGHT & CINEMATIC */
 body {
-  body {
   height: 100vh;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
@@ -22,13 +21,14 @@ body {
   animation: cinematicBG 18s ease-in-out infinite;
 }
 
+/* SLOW BACKGROUND MOTION */
 @keyframes cinematicBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* CENTER CONTENT */
+/* MAIN CONTENT CENTER */
 .content {
   height: 100vh;
   display: flex;
@@ -37,60 +37,96 @@ body {
   align-items: center;
   text-align: center;
   color: white;
+  z-index: 2;
 }
 
-/* MAIN TEXT */
+/* TITLE – CINEMATIC FADE */
 h1 {
   font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 1px;
   margin-bottom: 30px;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textFade 1.5s ease forwards;
 }
 
-/* BUTTONS */
+@keyframes textFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BUTTON WRAPPER */
 .buttons {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
+/* BUTTON BASE */
 button {
   font-size: 20px;
   padding: 15px 40px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transform: scale(1.08);
 }
 
+/* YES BUTTON – SLOW SOFT PULSE */
 #yes {
   background: #00e676;
   color: black;
+  animation: softPulse 2.8s ease-in-out infinite;
 }
 
+/* SOFT, NOT LOUD PULSE */
+@keyframes softPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(255,255,255,0.4);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(255,255,255,0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255,255,255,0.4);
+  }
+}
+
+/* NO BUTTON */
 #no {
-  background: #ff5252;
+  background: #ff6b6b;
   color: black;
 }
 
-/* FLOATING HEARTS */
+/* FLOATING HEARTS – SLOW & LIGHT */
 .hearts span {
   position: absolute;
   bottom: -20px;
   font-size: 18px;
-  animation: floatUp 6s linear infinite;
+  opacity: 0.6;
+  animation: floatSoft 9s linear infinite;
 }
 
-@keyframes floatUp {
+@keyframes floatSoft {
   0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
+    transform: translateY(0) scale(0.9);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
   }
   100% {
-    transform: translateY(-120vh) rotate(360deg);
+    transform: translateY(-120vh) scale(1.1);
     opacity: 0;
   }
 }
@@ -99,7 +135,7 @@ button:hover {
 .yes-image-container {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #ff5f9e, #ff7eb3);
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
 
   display: flex;
   flex-direction: column;
